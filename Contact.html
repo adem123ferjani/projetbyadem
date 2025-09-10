@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title> فلسطين اليوم </title>
+  <link rel="stylesheet" href="contact.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Amiri", "Times New Roman", serif;
+      background: #f9f9f9;
+      color: #111;
+      line-height: 1.8;
+      direction: rtl;
+      unicode-bidi: plaintext;
+    }
+    .logo{
+      width: 136px;
+    }
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #fff;
+      border-bottom: 3px solid #000;
+      padding: 8px 8px;
+    }
+    .navbar img {
+      width: 136px;
+      height: auto;
+    }
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      font-size: 20px;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+    }
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+    .donate-btn {
+      background: #c00;
+      color: #fff;
+      border: none;
+      padding: 12px 16px;
+      cursor: pointer;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    .donate-btn:hover {
+      background: #900;
+    }
+    main {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 15px;
+    }
+    .contact-container {
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 25px;
+      border-radius: 8px;
+    }
+    .contact-container h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+    .contact-container p {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .contact-form label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    .contact-form button {
+      background: #c00;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 1rem;
+      border-radius: 4px;
+      text-transform: uppercase;
+      display: block;
+      margin: 0 auto;
+    }
+    .contact-form button:hover {
+      background: #900;
+    }
+    .contact-info {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 1.1rem;
+      color: #333;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+      border-top: 2px solid #000;
+      font-size: 0.9rem;
+      color: #555;
+    }
+       /* Blinking Latest News */
+    .news-link {
+      color: red ;
+      animation: blink 1.5s infinite alternate;
+    }
+    @keyframes blink {
+      from { opacity: 1; }
+      to { opacity: 0.75; }
+    }
+    .news-link {
+      color: red;
+      animation: blink 1.5s infinite alternate;
+    }
+    @keyframes blink {
+      from { opacity: 1; }
+      to { opacity: 0.6; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">
+      <img src="logo.png" alt="الشعار">
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">الرئيسية</a></li>
+      <li><a href="news.html" class="news-link">أحدث الأخبار</a></li>
+      <li><a href="history.html" >تاريخ فلسطين</a></li>
+      <li ><a href="Contact.html">اتصل بنا</a></li>
+    </ul>
+    <button class="donate-btn" id="myButton" >تبرع الآن</button>
+  </div>
+  <script type="text/javascript">
+    document.getElementById("myButton").onclick = function () {
+        location.href = "donates.html";
+    };
+</script>
+  <main>
+    <div class="contact-container">
+      <h1>اتصل بنا</h1>
+      <p>يسعدنا تواصلكم معنا لأي استفسار، اقتراح أو ملاحظة. يرجى ملء النموذج أدناه وسنرد عليكم في أقرب وقت ممكن.</p>
+
+      <form class="contact-form" action="#" method="post">
+        <label for="name">الاسم الكامل</label>
+        <input type="text" id="name" name="name" placeholder="أدخل اسمك الكامل" required>
+
+        <label for="email">البريد الإلكتروني</label>
+        <input type="email" id="email" name="email" placeholder="أدخل بريدك الإلكتروني" required>
+
+        <label for="subject">الموضوع</label>
+        <input type="text" id="subject" name="subject" placeholder="أدخل موضوع الرسالة" required>
+
+        <label for="message">الرسالة</label>
+        <textarea id="message" name="message" rows="5" placeholder="اكتب رسالتك هنا..." required></textarea>
+
+        <button type="submit">إرسال</button>
+      </form>
+
+      <div class="contact-info">
+        <p><strong>البريد الإلكتروني:</strong> contact@alhaqiqa.com</p>
+        <p><strong>الهاتف:</strong> +216 20 000 000</p>
+        <p><strong>العنوان:</strong> شارع الحرية، تونس</p>
+      </div>
+    </div>
+  </main>
+
+   <footer>
+    فلسطين  اليوم .  
+  </footer>
+</body>
+</html>
